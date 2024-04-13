@@ -1,0 +1,71 @@
+{
+  "name": "@defensestation/blocknote-comments",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p ./tsconfig-build.json && vite build",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.20",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@blocknote/core": "^0.12.4",
+    "@blocknote/react": "^0.12.4",
+    "@floating-ui/react": "^0.26.4",
+    "@mantine/core": "^7.7.1",
+    "@mantine/hooks": "^7.7.1",
+    "@mantine/utils": "^6.0.21",
+    "@tiptap/core": "^2.0.3",
+    "@tiptap/react": "^2.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.3.1",
+    "prosemirror-model": "^1.18.3",
+    "prosemirror-state": "^1.4.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.20",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "glob": "^10.3.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3",
+    "vite-plugin-lib-inject-css": "^2.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/defensestation/blocknote-comments"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ]
+}
