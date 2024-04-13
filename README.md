@@ -1,7 +1,7 @@
 # EditorJS Drag/Drop Plugin
 
 ![Stability Badge](https://img.shields.io/badge/stability-stable-green.svg)
-![](https://badgen.net/badge/Editor.js/v0.0.1/blue)
+![](https://badgen.net/badge/Version/v1.0.0/blue)
 
 Comments feature for [Blocknote](https://www.blocknotejs.org/).
 
