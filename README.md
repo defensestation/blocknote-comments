@@ -1,30 +1,68 @@
-# React + TypeScript + Vite
+# EditorJS Drag/Drop Plugin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Stability Badge](https://img.shields.io/badge/stability-stable-green.svg)
+![](https://badgen.net/badge/Editor.js/v0.0.1/blue)
 
-Currently, two official plugins are available:
+Comments feature for [Blocknote](https://www.blocknotejs.org/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![](assets/demo.gif)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Install via YARN
 
-- Configure the top-level `parserOptions` property like this:
+Get the package
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```shell
+$ yarn add @defensestation/blocknote-comments
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+## Usage
+
+Include module at your application
+
+```javascript
+import {
+  commentStyleSpec,
+  CommentToolbarController,
+  CreateCommentButton,
+} from "@defensestation/blocknote-comments";
+```
+
+Create schema with comment style spec.
+```javascript
+const schema = BlockNoteSchema.create({
+  styleSpecs: {
+    // Adds all default styles.
+    ...defaultStyleSpecs,
+    // Adds the Font style.
+    comment: commentStyleSpec,
+  },
+});
+```
+
+Add comment button in toolbar.
+```javascript
+const CustomToolbar = () => (<FormattingToolbarController
+          formattingToolbar={() => (
+            <FormattingToolbar>
+              <CreateCommentButton key={"createCommentButtin"} />
+            </FormattingToolbar>
+          )}
+        />)
+```
+
+Add comment controller.
+```javascript
+<BlockNoteView formattingToolbar={false} editor={editor}>
+    <CustomToolbar />
+    <CommentToolbarController />
+</BlockNoteView>
+```
+
+
+## Demo
+
+[A demo is worth a thousand words](https://defencestation.com)
