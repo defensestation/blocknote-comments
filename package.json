@@ -1,6 +1,8 @@
 {
   "name": "@defensestation/blocknote-comments",
-  "version": "1.0.0",
+  "description": "Comments plugin for blocknote editor.",
+  "keywords": ["comments-plugin", "blocknote", "editor", "comments"],
+  "version": "1.0.2",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",

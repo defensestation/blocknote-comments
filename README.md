@@ -41,7 +41,6 @@ const schema = BlockNoteSchema.create({
   styleSpecs: {
     // Adds all default styles.
     ...defaultStyleSpecs,
-    // Adds the Font style.
     comment: commentStyleSpec,
   },
 });
