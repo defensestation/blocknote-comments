@@ -1,5 +1,13 @@
 # Comments for Blocknote
 
+> [!CAUTION]
+> **This repository has been archived.** It is no longer actively maintained or updated.
+> 
+> Development has been moved to a new project: **[y-comments]**
+> 👉 **[y-comments](https://github.com/defensestation/y-comments)**
+
+---
+
 ![Stability Badge](https://img.shields.io/badge/stability-stable-green.svg)
 ![](https://badgen.net/badge/Version/v1.0.0/blue)
 
